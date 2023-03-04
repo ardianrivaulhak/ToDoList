@@ -1,5 +1,6 @@
 'use strict';
 const { Model } = require('sequelize');
+const { hashPassword } = require('../helpers/bycrypt');
 module.exports = (sequelize, DataTypes) => {
   class User extends Model {
     /**
@@ -8,7 +9,6 @@ module.exports = (sequelize, DataTypes) => {
      * The `models/index` file will call this method automatically.
      */
     static associate(models) {
-      // define association here
       User.hasMany(models.Product, { foreignKey: 'authorId' });
     }
   }
@@ -18,46 +18,63 @@ module.exports = (sequelize, DataTypes) => {
         type: DataTypes.STRING,
         allowNull: false,
         validate: {
-          notNull: { msg: 'username is required' },
-          notEmpty: { msg: 'username is required' },
+          notNull: {
+            msg: 'username is required',
+          },
+          notEmpty: {
+            msg: 'username is required',
+          },
         },
       },
       email: {
         type: DataTypes.STRING,
         allowNull: false,
-        unique: true,
+        unique: {
+          msg: 'email already registered',
+        },
         validate: {
-          notNull: { msg: 'email is required' },
-          notEmpty: { msg: 'email is required' },
-          isEmail: { msg: 'email must be unique' },
+          notNull: {
+            msg: 'email is required',
+          },
+          notEmpty: {
+            msg: 'email is required',
+          },
+          isEmail: {
+            msg: 'invalid email format',
+          },
         },
       },
       password: {
         type: DataTypes.STRING,
         allowNull: false,
         validate: {
-          notNull: { msg: 'password is required' },
-          notEmpty: { msg: 'password is required' },
+          notNull: {
+            msg: 'password is required',
+          },
+          notEmpty: {
+            msg: 'password is required',
+          },
+          len: {
+            args: [5],
+            msg: 'minimum password length is 5',
+          },
         },
       },
       phoneNumber: {
         type: DataTypes.STRING,
-        allowNull: false,
-        validate: {
-          notNull: { msg: 'phoneNumber is required' },
-          notEmpty: { msg: 'phoneNumber is required' },
-        },
+        allowNull: true,
       },
       address: {
         type: DataTypes.STRING,
-        allowNull: false,
-        validate: {
-          notNull: { msg: 'address is required' },
-          notEmpty: { msg: 'address is required' },
-        },
+        allowNull: true,
       },
     },
     {
+      hooks: {
+        beforeCreate(instance, options) {
+          instance.password = hashPassword(instance.password);
+        },
+      },
       sequelize,
       modelName: 'User',
     }
