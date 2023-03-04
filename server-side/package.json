@@ -1,5 +1,5 @@
 {
-  "name": "server",
+  "name": "server-side",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -9,9 +9,6 @@
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "devDependencies": {
-    "sequelize-cli": "^6.6.0"
-  },
   "dependencies": {
     "bcryptjs": "^2.4.3",
     "cors": "^2.8.5",
@@ -20,5 +17,8 @@
     "jsonwebtoken": "^9.0.0",
     "pg": "^8.9.0",
     "sequelize": "^6.29.0"
+  },
+  "devDependencies": {
+    "sequelize-cli": "^6.6.0"
   }
 }

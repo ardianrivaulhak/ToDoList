@@ -1,6 +1,5 @@
 'use strict';
 const fs = require('fs');
-const { hashPassword } = require('../helpers/bycrypt');
 
 /** @type {import('sequelize-cli').Migration} */
 module.exports = {
@@ -15,18 +14,17 @@ module.exports = {
      * }], {});
      */
 
-    const dataUser = JSON.parse(fs.readFileSync('./database/database.json', 'utf-8'));
+    const data = JSON.parse(fs.readFileSync('./data/database.json', 'utf-8'));
 
-    const user = dataUser.User;
+    const categories = data.Category;
 
-    user.forEach((el) => {
+    categories.forEach((el) => {
       delete el.id;
-      el.password = hashPassword(el.password);
       el.createdAt = new Date();
       el.updatedAt = new Date();
     });
 
-    // await queryInterface.bulkInsert('Users', user, {});
+    await queryInterface.bulkInsert('Categories', categories, {});
   },
 
   async down(queryInterface, Sequelize) {
@@ -36,6 +34,6 @@ module.exports = {
      * Example:
      * await queryInterface.bulkDelete('People', null, {});
      */
-    // await queryInterface.bulkDelete('Users', null, {});
+    await queryInterface.bulkDelete('Categories', null, {});
   },
 };

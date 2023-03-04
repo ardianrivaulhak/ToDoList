@@ -14,17 +14,17 @@ module.exports = {
      * }], {});
      */
 
-    const data = JSON.parse(fs.readFileSync('./database/database.json', 'utf-8'));
+    const data = JSON.parse(fs.readFileSync('./data/database.json', 'utf-8'));
 
-    const categories = data.Category;
+    const products = data.Product;
 
-    categories.forEach((el) => {
+    products.forEach((el) => {
       delete el.id;
       el.createdAt = new Date();
       el.updatedAt = new Date();
     });
 
-    // await queryInterface.bulkInsert('Categories', categories, {});
+    await queryInterface.bulkInsert('Products', products, {});
   },
 
   async down(queryInterface, Sequelize) {
@@ -34,6 +34,6 @@ module.exports = {
      * Example:
      * await queryInterface.bulkDelete('People', null, {});
      */
-    // await queryInterface.bulkDelete('Categories', null, {});
+    await queryInterface.bulkDelete('Products', null, {});
   },
 };
