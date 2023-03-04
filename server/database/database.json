@@ -1,0 +1,165 @@
+{
+  "User": [
+    {
+      "id": 1,
+      "username": "admin",
+      "email": "admin@mail.com",
+      "password": "admin",
+      "phoneNumber": "0812",
+      "address": "jalan"
+    }
+  ],
+  "Product": [
+    {
+      "id": 1,
+      "name": "Telecaster Sunburst 1974",
+      "slug": "",
+      "description": "A real nice and clean vintage 1974 Fender Telecaster in beautiful sunburst finish. Plays and sounds fantastic with clean original case",
+      "price": 18500000,
+      "mainImg": "https://static.sonovente.com/img/library/zoom/62/optim/62198_1.jpg",
+      "categoryId": 1,
+      "authorId": 1
+    },
+    {
+      "id": 2,
+      "name": "Stratocaster Red 2013",
+      "slug": "",
+      "description": "Fender American Standard Stratocaster 2013 Red. Made in USA. Very Mint Condition. All Original. Function & Electronic 100% Great Settings & Playability. Complete with Fender Original SKB Hardcase, Handle, Papers, Etc",
+      "price": 11800000,
+      "mainImg": "https://galerimusikindonesia.com/image/cache/data/gitar%20dan%20bass/Gitar%20Elektrik/fender/American%20Professional%20Cherry/American+Professional+Stratocaster+top-700x700.jpg",
+      "categoryId": 1,
+      "authorId": 1
+    },
+    {
+      "id": 3,
+      "name": "Les Paul Jr Yellow 1957",
+      "slug": "",
+      "description": "In guitar lingo, being 'ruined' is when you play something so good, there's no going back to what you once had. No Gibson guitar has evoked this expression more than the Les Paul Junior.",
+      "price": 31000000,
+      "mainImg": "https://www.seamusician.com/image/sea/image/cache/data/all_product_images/product-4646/yQKA9LPj1620616324-1250x1250.png",
+      "categoryId": 2,
+      "authorId": 1
+    },
+    {
+      "id": 4,
+      "name": "SilverSky - John Mayer blue 2021",
+      "slug": "",
+      "description": "The PRS Silver Sky is an idealized version of a vintage single-coil guitar where every detail adds up and sets this guitar apart from the pack and the past. The result of a close collaboration between Grammy Award-winning musician John Mayer and Paul Reed Smith, the Silver Sky is based off of years of development.",
+      "price": 24000000,
+      "mainImg": "https://thumbs.static-thomann.de/thumb/padthumb600x600/pics/bdb/533307/16895862_800.jpg",
+      "categoryId": 3,
+      "authorId": 1
+    },
+    {
+      "id": 5,
+      "name": "G2420 - Streamliner Sunburst 2008",
+      "slug": "",
+      "description": "Body Shape Streamliner™ Hollow Body. Body Material Laminated Maple .Body Colour Aged Brooklyn Burst .Body Finish Gloss. Fretboard Material Laurel .Fretboard Radius 12'' (305 mm) .Scale Length 24.75'' (629 mm) .No. of Frets 22",
+      "price": 8000000,
+      "mainImg": "https://www.stars-music.com/medias/gretsch/g2420-streamliner-hollow-body-with-chromatic-ii-hh-ht-lau-hd-160254.jpg",
+      "categoryId": 4,
+      "authorId": 1
+    },
+    {
+      "id": 6,
+      "name": "Majesty - John Petrucci Silver 2014",
+      "slug": "",
+      "description": "This Ernie Ball Music Man BFR John Petrucci Majesty is a one-stop performance shop for guitarists. A resonant basswood body provides the core of its sound, which extends seamlessly into its Honduran mahogany neck with never-ending sustain. Harness an endless array of tones by way of two DiMarzio humbuckers, an active preamp, and an internal piezo system.",
+      "price": 49000000,
+      "mainImg": "https://bekasimusik.files.wordpress.com/2016/06/600-m7-full.jpg",
+      "categoryId": 5,
+      "authorId": 1
+    }
+  ],
+  "Category": [
+    {
+      "name": "Fender"
+    },
+    {
+      "name": "Gibson"
+    },
+    {
+      "name": "PRS"
+    },
+    {
+      "name": "Gretch"
+    },
+    {
+      "name": "Musicman"
+    }
+  ],
+  "Images": [
+    {
+      "productId": "1",
+      "imgUrl": "https://static.sonovente.com/img/library/zoom/62/optim/62198_1.jpg"
+    },
+    {
+      "productId": "1",
+      "imgUrl": "https://static.sonovente.com/img/library/zoom/62/optim/62198_1.jpg"
+    },
+    {
+      "productId": "1",
+      "imgUrl": "https://static.sonovente.com/img/library/zoom/62/optim/62198_1.jpg"
+    },
+    {
+      "productId": "2",
+      "imgUrl": "https://galerimusikindonesia.com/image/cache/data/gitar%20dan%20bass/Gitar%20Elektrik/fender/American%20Professional%20Cherry/American+Professional+Stratocaster+top-700x700.jpg"
+    },
+    {
+      "productId": "2",
+      "imgUrl": "https://galerimusikindonesia.com/image/cache/data/gitar%20dan%20bass/Gitar%20Elektrik/fender/American%20Professional%20Cherry/American+Professional+Stratocaster+top-700x700.jpg"
+    },
+    {
+      "productId": "2",
+      "imgUrl": "https://galerimusikindonesia.com/image/cache/data/gitar%20dan%20bass/Gitar%20Elektrik/fender/American%20Professional%20Cherry/American+Professional+Stratocaster+top-700x700.jpg"
+    },
+    {
+      "productId": "3",
+      "imgUrl": "https://www.seamusician.com/image/sea/image/cache/data/all_product_images/product-4646/yQKA9LPj1620616324-1250x1250.png"
+    },
+    {
+      "productId": "3",
+      "imgUrl": "https://www.seamusician.com/image/sea/image/cache/data/all_product_images/product-4646/yQKA9LPj1620616324-1250x1250.png"
+    },
+    {
+      "productId": "3",
+      "imgUrl": "https://www.seamusician.com/image/sea/image/cache/data/all_product_images/product-4646/yQKA9LPj1620616324-1250x1250.png"
+    },
+    {
+      "productId": "4",
+      "imgUrl": "https://thumbs.static-thomann.de/thumb/padthumb600x600/pics/bdb/533307/16895862_800.jpg"
+    },
+    {
+      "productId": "4",
+      "imgUrl": "https://thumbs.static-thomann.de/thumb/padthumb600x600/pics/bdb/533307/16895862_800.jpg"
+    },
+    {
+      "productId": "4",
+      "imgUrl": "https://thumbs.static-thomann.de/thumb/padthumb600x600/pics/bdb/533307/16895862_800.jpg"
+    },
+    {
+      "productId": "5",
+      "imgUrl": "https://www.stars-music.com/medias/gretsch/g2420-streamliner-hollow-body-with-chromatic-ii-hh-ht-lau-hd-160254.jpg"
+    },
+    {
+      "productId": "5",
+      "imgUrl": "https://www.stars-music.com/medias/gretsch/g2420-streamliner-hollow-body-with-chromatic-ii-hh-ht-lau-hd-160254.jpg"
+    },
+    {
+      "productId": "5",
+      "imgUrl": "https://www.stars-music.com/medias/gretsch/g2420-streamliner-hollow-body-with-chromatic-ii-hh-ht-lau-hd-160254.jpg"
+    },
+    {
+      "productId": "6",
+      "imgUrl": "https://bekasimusik.files.wordpress.com/2016/06/600-m7-full.jpg"
+    },
+    {
+      "productId": "6",
+      "imgUrl": "https://bekasimusik.files.wordpress.com/2016/06/600-m7-full.jpg"
+    },
+    {
+      "productId": "6",
+      "imgUrl": "https://bekasimusik.files.wordpress.com/2016/06/600-m7-full.jpg"
+    }
+  ]
+}
